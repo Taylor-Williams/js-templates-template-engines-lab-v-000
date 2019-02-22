@@ -9,6 +9,9 @@ function createPost() {
   let postTemplateFn = _.template(postTemplate)
   let postTemplateHTML = postTemplateFn({ postAuthor: postAuthor,
   postTitle: postTitle, postBody: postBody})
+  let commentsTemplate = document.getElementById('comments-template').innerHTML
+  let commentsTemplateFn = _.template(commentsTemplate)
+  let commentsTemplateHTML = commentsTemplateFn()
   pageTemplateHTML.querySelector('post-div').appendChild(postTemplateHTML)
   let docBody = document.querySelector('body')
   docBody.innerHTML += pageTemplateHTML
