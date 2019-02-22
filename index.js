@@ -12,8 +12,8 @@ function createPost() {
   let commentsTemplate = document.getElementById('comments-template').innerHTML
   let commentsTemplateFn = _.template(commentsTemplate)
   let commentsTemplateHTML = commentsTemplateFn()
-  let docBody = document.querySelector('body')
-  docBody.innerHTML += pageTemplateHTML
+  let docMain = document.querySelector('main')
+  docMain.innerHTML += pageTemplateHTML
   document.querySelector("post-div").innerHTML += postTemplateHTML
   document.querySelector("post-div").innerHTML += postTemplateHTML
 }
