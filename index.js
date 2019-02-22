@@ -12,9 +12,10 @@ function createPost() {
   let commentsTemplate = document.getElementById('comments-template').innerHTML
   let commentsTemplateFn = _.template(commentsTemplate)
   let commentsTemplateHTML = commentsTemplateFn()
-  pageTemplateHTML.querySelector('post-div').appendChild(postTemplateHTML)
   let docBody = document.querySelector('body')
   docBody.innerHTML += pageTemplateHTML
+  document.querySelector("post-div").innerHTML += postTemplateHTML
+  document.querySelector("post-div").innerHTML += postTemplateHTML
 }
 function postComment() {
   let commenter = document.getElementById('commenterName').value;
