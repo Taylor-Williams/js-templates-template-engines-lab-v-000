@@ -15,7 +15,7 @@ function createPost() {
   let docMain = document.querySelector('main')
   docMain.innerHTML += pageTemplateHTML
   document.querySelector("post-div").innerHTML += postTemplateHTML
-  document.querySelector("post-div").innerHTML += postTemplateHTML
+  document.querySelector("post-div").innerHTML += commentsTemplateHTML
 }
 function postComment() {
   let commenter = document.getElementById('commenterName').value;
